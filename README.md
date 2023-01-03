@@ -10,6 +10,6 @@ The design is for the coding team Gazpachon to build.
 
 - Simon Vindahl [@KennedyB1](https://github.com/KennedyB1)
 - Cecilia Lepik [@CeciliaL1](https://github.com/CeciliaL1)
-- Jenny Svensson [@Jenny-Svensson]((https://github.com/Jenny-Svensson))
+- Jenny Svensson [@Jenny-Svensson](https://github.com/Jenny-Svensson)
 - Alen Gusinac [@alengusinac](https://github.com/alengusinac)
 

@@ -22,3 +22,6 @@ Header should appear from the top of the page.
 Main picture on each screensize should be 100vh and should fade in
 The quote should appear from the left side of the screen
 buttons ‘’take away’’ and ‘’book table’’ should appear from the right side of the screen.
+
+### FIMGA LINK:
+https://www.figma.com/file/d72F06UMzVqLvKZP1XIYA4/Pizzaleria?node-id=0%3A1&t=elYL0i9JELhDjie2-0

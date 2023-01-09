@@ -8,6 +8,7 @@ The design is for the coding team Gazpachon to build.
 
 ## Authors
 
+Design:
 - Simon Vindahl [@KennedyB1](https://github.com/KennedyB1)
 - Cecilia Lepik [@CeciliaL1](https://github.com/CeciliaL1)
 - Jenny Svensson [@Jenny-Svensson](https://github.com/Jenny-Svensson)

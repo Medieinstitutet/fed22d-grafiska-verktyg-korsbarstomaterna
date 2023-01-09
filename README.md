@@ -5,6 +5,10 @@
 Design team from Medieinstitutet designing a landing page for a pizza restaurant called Pizzaleria.
 The design is for the coding team Gazpachon to build.
 
+## Figma link
+https://www.figma.com/file/d72F06UMzVqLvKZP1XIYA4/Pizzaleria?node-id=0%3A1&t=nBW9V4KKj4tYfP10-1
+
+
 
 ## Authors
 

@@ -21,17 +21,24 @@
 
   <body>
     <!--Header section-->
+    <div id="mobileNav" class="burger--menu-nav display-none"></div>
     <header>
       <div class="logo-section">
         <!--Section to display logo and name-->
         <img src="/public/pngfind.com-paloma-dibujo-png-3730498.png" alt="pizza" height="50" width="50" />
         <h1>Pizzaleria</h1>
       </div>
-      <nav class="burger-menu">
+      <nav class="burger--menu">
         <!--Hamburger icon-->
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
-        <span class="burger-bar"></span>
+
+        <button class="burger--menu-button" aria-label="Mobile menu" aria-expanded="false" aria-controls="mobileNav">
+          <div class="burger--menu-button-outer">
+            <span class="burger--menu-button-bar"></span>
+            <span class="burger--menu-button-bar"></span>
+            <span class="burger--menu-button-bar"></span>
+          </div>
+          <div class="burger--menu-button-inner display-none"><i class="fa-solid fa-utensils"></i></div>
+        </button>
       </nav>
       <div class="header-background-image">
         <!--Div to display the header image containing a pizza-->

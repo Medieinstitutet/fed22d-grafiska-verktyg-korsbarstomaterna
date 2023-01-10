@@ -1,7 +1,6 @@
-const initScript = () => {
-  const documentElement = document.querySelector('#vite') as HTMLParagraphElement;
-  documentElement.innerHTML = 'Hello from Vite';
-};
+import toggleMenu from './components/navbar';
 
-initScript();
-export default initScript;
+const burgerButtonEl = document.querySelector('.burger--menu-button');
+if (burgerButtonEl) {
+  burgerButtonEl.addEventListener('click', toggleMenu);
+}

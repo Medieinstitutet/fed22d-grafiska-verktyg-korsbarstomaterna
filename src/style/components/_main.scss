@@ -7,16 +7,19 @@ main {
     color: white;
     padding: 20px;
 
-    h3 {
-        text-align: center;
-        font-family: 'Satisfy', cursive;
-        font-size: 2rem;
-        margin-left: 40px;
-        margin-right: 40px;
-    }
+    .amore {
+        max-width: fit-content;
+        margin: 0 auto;
 
-    .stroke {
-        display: none;
+        h3 {
+            text-align: center;
+            font-family: 'Satisfy', cursive;
+            font-size: 2rem;
+        }
+
+        .stroke {
+            display: none;
+        }
     }
 }
 
@@ -66,10 +69,45 @@ main {
         grid-template-areas:
             "top top"
             "bot-left bot-right";
+    }
 
+    main {
+        .amore {
+            .stroke {
+                display: block;
+            }
+        }
     }
 
     .card:nth-child(1) {
         grid-area: top;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pizza-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 335px;
+        height: 600px;
+
+    }
+
+    .card:nth-child(1) {
+        width: 400px;
+        height: 700px;
+        order: 2;
+        margin: 0 50px 0 50px;
+    }
+
+    .card:nth-child(2) {
+        order: 1;
+    }
+
+    .card:nth-child(3) {
+        order: 3;
     }
 }

@@ -4,14 +4,101 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+
+    <title>Pizzaleria</title>
   </head>
 
+    <!--Styling-->
+    
+
   <body>
+    <!--Header section-->
+    <header>
+      <div class="logo-section"> <!--Section to display logo and name-->
+        <img src="assets/img/pngfind.com-paloma-dibujo-png-3730498.png" alt="pizza" height="50" width="50">
+        <h1>Pizzaleria</h1>                 
+      </div>
+      <nav id="burger--menu"> <!--Hamburger icon-->
+        <span class="burger--bar"></span>
+        <span class="burger--bar"></span>
+        <span class="burger--bar"></span>
+      </nav>
+      <div class="header-background-image"> <!--Div to display the header image containing a pizza-->
+        <div class="header-buttons">
+          <button>BOOK A TABLE</button>
+          <button>TAKEAWAY</button>
+        </div>
+
+        <div class="quote"> <!--Quote visible on tablet and dekstop screens-->
+          <blockquote>I think of dieting, then I eat pizza.</blockquote>
+        </div>
+      </div>
+
+      <div class="cookies">
+        <p>You will have to accept cookies to continue on this website. 
+          Sorry to say they don’t taste good but we´ll promise you our pizza does!
+        </p>
+        <button>Accept</button>
+        <button>Decline </button>
+      </div>
+    </header>
+
+    <!--Main section-->
     <main>
-      <p>Hello World</p>
-      <p id="vite"></p>
+      <h3>Pizza fatta con amore.</h3> 
+      <div class="card"> <!--Card to display all the information about the pizza-->
+        <img src="assets/img/webformat/cardPizza.jpg" alt="classic pizza">
+        <h2>Classic</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur elit, sed ut aliqua.</p>
+        <button>Menu</button>
+      </div>
+
+      <div class="card">
+        <img src="assets/img/webformat/cardPizza.jpg" alt="vegan pizza">
+        <h2>Vegan</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur elit, sed ut aliqua.</p>
+        <button>Menu</button>
+      </div>
+      
+      <div class="card">
+        <img src="assets/img/webformat/cardPizza.jpg" alt="meat pizza">
+        <h2>Meat</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur elit, sed ut aliqua.</p>
+        <button>Menu</button>
+      </div>
     </main>
-    <script type="module" src="src/main.ts"></script>
+    
+    <footer>
+      <h4>Pizzaleria</h4>
+      <p>
+        Cheeseandtomatostreet 42 <br>
+        000 00 Pizzatown <br>
+      </p>
+      <div>
+        <i class="fa-sharp fa-solid fa-phone"></i>
+        <strong> 0813-53597249 </strong>
+      </div>
+      <div>
+        <i class="fa-sharp fa-solid fa-clock"></i>
+        <p>
+          <strong>Open hours:</strong>
+          monday-thursday: 10-01 <br>
+          friday-sunday: 12-03
+        </p>
+        <p>
+          Sign up for latest news and happenings:
+        </p>
+        <input type="mail" placeholder="enter your email">
+        <button>Send</button>
+      </div>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-sharp fa-solid fa-envelope"></i>
+    </footer>
+     <!--Font awesome-->
+     <script src="https://kit.fontawesome.com/6e63925041.js" crossorigin="anonymous"></script>
+      
+     <!--Scripts-->
+     <script type="module" src="src/main.ts"></script>
   </body>
 </html>

@@ -1,0 +1,48 @@
+main {
+    background: green;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        text-align: center;
+        font-family: 'Satisfy', cursive;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    height: 390px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+    border-radius: 30px;
+
+    padding: 20px 10px 20px 10px;
+    background: darkgreen;
+    text-align: center;
+    margin: 30px auto;
+
+    color: #fff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    p {
+        text-align: left;
+        padding: 10px;
+        font-family: 'Roboto Mono', sans-serif;
+    }
+
+    button {
+        margin: 0 20px 0 20px;
+        border: 5px solid green;
+        border-radius: 12px;
+        height: 46px;
+        color: green;
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}

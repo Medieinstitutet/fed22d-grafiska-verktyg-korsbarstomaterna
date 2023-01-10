@@ -1,0 +1,10 @@
+header {
+    background-color: aqua;
+}
+
+@media screen and (min-width: 400px) {
+    header {
+        background-color: aquamarine;
+    }
+};
+    

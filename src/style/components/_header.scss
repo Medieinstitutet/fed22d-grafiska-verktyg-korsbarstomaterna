@@ -12,89 +12,149 @@ $neutral-white: #ffffff;
 $neutral-grey: #a0a0a0;
 $neutral-dark-grey: #212121;
 
-
 header {
+  background-color: $primary-red;
+
+  .nav-container {
     background-color: $primary-red;
+    color: $neutral-white;
+    max-height: 90px;
+  }
 
-    .nav-container {
-        background-color: $primary-red;
-        color: $neutral-white;
-        max-height: 90px;
+  .logo-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    padding: 20px 0px 20px 50px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+    .menu-pad-desktop {
+      display: none;
     }
+  }
 
-    .logo-section {
-        display: flex;
-        width: 70%;
-        padding: 20px 0px 20px 50px;
-        font-family: 'Satisfy', cursive;
-        font-weight: 400;
-    }
+  .cookies {
+    font-family: 'Roboto Mono', sans-serif;
+    background-color: $primary-off-white;
+    padding: 2px;
+    font-weight: 400;
+    text-align: center;
+    position: absolute;
+    bottom: -90px;
+  }
 
-    .cookies {
-        font-family: 'Roboto Mono', sans-serif;
-        background-color: $primary-off-white;
-        padding: 2px;
-        font-weight: 400;
-        text-align: center;
-        position: absolute;
-        bottom: -90px;
-    }
+  .cookie-btn-container {
+    text-align: center;
+    width: 250px;
+    margin: auto;
+  }
 
-    .cookie-btn-container {
-        text-align: center;
-        width: 250px;
-        margin: auto;
-    }
+  .cookie-btn {
+    border: 4px solid $secondary-pop-up-yellow;
+    padding: 5px 20px;
+    color: $secondary-pop-up-yellow;
+    border-radius: 10px;
+    margin: 0 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
 
-    .cookie-btn {
-        border: 4px solid $secondary-pop-up-yellow;
-        padding: 5px 20px;
-        color: $secondary-pop-up-yellow;
-        border-radius: 10px;
-        margin: 0 15px;
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
+  .header-background-image {
+    background-image: url('/public/hello-i-m-nik-tE2EynlYV-A-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+  }
 
-    .header-background-image {
-        background-image: url('/public/hello-i-m-nik-tE2EynlYV-A-unsplash.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        position: relative;
-    }
+  .header-buttons-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
 
-    .header-buttons-container {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
+  .header-btn {
+    background-color: $primary-green;
+    border: none;
+    font-family: 'Roboto Mono', sans-serif;
+    color: $neutral-white;
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-size: 1rem;
+    text-shadow: 1px 2px 5px $neutral-black;
+  }
 
-    .header-btn {
-        background-color: $primary-green;
-        border: none;
-        font-family: 'Roboto Mono', sans-serif;
-        color: $neutral-white;
-        padding: 15px 35px;
-        border-radius: 12px;
-        font-size: 1rem;
-        text-shadow: 1px 2px 5px $neutral-black;
-    }
-
-    .quote {
-        display: none;
-    }
+  .quote {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 400px) {
-    header {
-        background-color: $primary-red;
+  header {
+    background-color: $primary-red;
+    .nav-container {
+      max-height: 200px;
     }
-};
-    
+    .logo-section {
+      img {
+        height: 70px;
+        width: 70px;
+        transform: translate(-15px, 20px);
+      }
+
+      h1 {
+        font-size: 64px;
+      }
+
+      .menu-pad-desktop {
+        display: block;
+        width: 100%;
+        ul {
+          font-family: 'Roboto Mono', sans-serif;
+          font-size: 20px;
+
+          li {
+            display: inline;
+            list-style: none;
+
+            a {
+              color: $neutral-white;
+              text-decoration: none;
+              text-transform: uppercase;
+              display: inline-block;
+              position: relative;
+
+              &:hover {
+                &::after {
+                  width: 100%;
+                  left: 0;
+                }
+              }
+              &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -2px;
+                width: 0px;
+                height: 2px;
+                background: #333;
+                transition: all 0.35s ease-out;
+                background-color: $neutral-white;
+              }
+            }
+          }
+
+          strong {
+            font-size: 27px;
+          }
+        }
+      }
+    }
+  }
+}

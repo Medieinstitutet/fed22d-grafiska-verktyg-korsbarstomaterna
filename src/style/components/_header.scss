@@ -1,9 +1,24 @@
+/* Colors */
+$primary-green: #009246;
+$primary-red: #af372c;
+$primary-off-white: #f1f2f1;
+
+$secondary-hover-green: #006530;
+$secondary-hover-red: #881c24;
+$secondary-pop-up-yellow: #d4ab17;
+
+$neutral-black: #000000;
+$neutral-white: #ffffff;
+$neutral-grey: #a0a0a0;
+$neutral-dark-grey: #212121;
+
+
 header {
-    background-color: aqua;
+    background-color: $primary-red;
 
     .logo-section {
-        background-color: #af372c;
-        color: #fff;
+        background-color: $primary-red;
+        color: $neutral-white;
         display: flex;
         width: 70%;
         padding: 20px 0px 20px 50px;
@@ -11,8 +26,30 @@ header {
         font-weight: 400;
     }
 
-    .burger-menu {
-        background-color: aquamarine;
+    .cookies {
+        font-family: 'Roboto Mono', sans-serif;
+        background-color: $primary-off-white;
+        padding: 2px;
+        font-weight: 400;
+        text-align: center;
+        position: absolute;
+        bottom: -90px;
+    }
+
+    .cookie-btn-container {
+        text-align: center;
+        width: 250px;
+        margin: auto;
+    }
+
+    .cookie-btn {
+        border: 4px solid $secondary-pop-up-yellow;
+        padding: 5px 20px;
+        color: $secondary-pop-up-yellow;
+        border-radius: 10px;
+        margin: 0 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
     }
 
     .header-background-image {
@@ -20,7 +57,7 @@ header {
         background-position: center;
         background-size: 350%;
         background-repeat: no-repeat;
-        height: 855px;
+        height: 100vh;
         position: relative;
     }
 
@@ -36,14 +73,14 @@ header {
     }
 
     .header-btn {
-        background-color: #009246;
+        background-color: $primary-green;
         border: none;
         font-family: 'Roboto Mono', sans-serif;
-        color: #fff;
+        color: $neutral-white;
         padding: 15px 35px;
         border-radius: 12px;
         font-size: 1rem;
-        text-shadow: 1px 2px 5px #000000;
+        text-shadow: 1px 2px 5px $neutral-black;
     }
 
     .quote {
@@ -53,7 +90,7 @@ header {
 
 @media screen and (min-width: 400px) {
     header {
-        background-color: aquamarine;
+        background-color: $primary-red;
     }
 };
     

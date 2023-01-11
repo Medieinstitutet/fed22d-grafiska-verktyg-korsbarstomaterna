@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+button {
+  padding: unset;
+  border: unset;
+  background: unset;
+
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    outline: unset;
+  }
+}
+
+.display-none {
+  display: none !important;
+}

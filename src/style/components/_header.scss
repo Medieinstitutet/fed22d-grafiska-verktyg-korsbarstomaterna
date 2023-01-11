@@ -101,6 +101,9 @@ header {
     .nav-container {
       max-height: 200px;
     }
+    .burger-menu-button {
+      display: none;
+    }
     .logo-section {
       img {
         height: 70px;
@@ -111,7 +114,6 @@ header {
       h1 {
         font-size: 64px;
       }
-
       .menu-pad-desktop {
         display: block;
         width: 100%;

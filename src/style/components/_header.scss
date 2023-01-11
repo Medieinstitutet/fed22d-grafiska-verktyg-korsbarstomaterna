@@ -66,7 +66,7 @@ header {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: calc(100vh - 90px);
     position: relative;
   }
 
@@ -100,8 +100,10 @@ header {
 @media screen and (min-width: 400px) {
   header {
     background-color: $primary-red;
+
     .nav-container {
       max-height: 200px;
+      height: 200px;
     }
     .burger-menu-button {
       display: none;
@@ -121,6 +123,7 @@ header {
       }
 
       h1 {
+        margin: 5px;
         font-size: 64px;
       }
       .menu-pad-desktop {
@@ -129,6 +132,7 @@ header {
         ul {
           font-family: 'Roboto Mono', sans-serif;
           font-size: 20px;
+          margin: 10px;
 
           li {
             display: inline;
@@ -165,6 +169,12 @@ header {
             font-size: 27px;
           }
         }
+      }
+    }
+    .header-background-image {
+      height: calc(100vh - 200px);
+      .header-buttons-container {
+        left: 70%;
       }
     }
   }

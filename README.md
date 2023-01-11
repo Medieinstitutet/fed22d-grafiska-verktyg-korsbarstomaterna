@@ -8,6 +8,9 @@ The design is for the coding team Gazpachon to build.
 ## Figma link
 https://www.figma.com/file/d72F06UMzVqLvKZP1XIYA4/Pizzaleria?node-id=0%3A1&t=nBW9V4KKj4tYfP10-1
 
+## 3d pizza.
+https://sketchfab.com/3d-models/pizza-f8e13d5694464e8581907dde27bb59c8
+
 
 
 ## Authors

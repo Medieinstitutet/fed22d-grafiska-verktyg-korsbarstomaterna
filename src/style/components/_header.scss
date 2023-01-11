@@ -32,7 +32,9 @@ header {
       display: none;
     }
   }
-
+  .pizza3d {
+    display: none;
+  }
   .cookies {
     font-family: 'Roboto Mono', sans-serif;
     background-color: $primary-off-white;
@@ -105,8 +107,9 @@ header {
       display: none;
     }
     .pizza3d {
-      z-index: 3;
+      z-index: 10;
       position: absolute;
+      display: block;
       right: 0;
       top: -30px;
     }

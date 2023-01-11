@@ -94,3 +94,55 @@ footer {
     }
   }
 }
+
+
+/* Tablet screen size */
+@media screen and (min-width: 768px) {
+  .footer-upper-container {
+    display: flex;
+    max-width: 850px;
+    margin: auto;
+
+    .phone-number {
+      font-family: 'Roboto Mono';
+    }
+
+    .open-hours {
+      margin-top: 45px;
+    }
+
+    .fa-clock {
+      top: 50%;
+      transform: translate(10%, -50%);
+    }
+  }
+
+  .footer-bottom-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 850px;
+    margin: auto;
+
+    .social-media {
+      display: flex;
+      align-items: flex-end;
+      justify-content: end;
+      margin-right: 15px;
+    }
+
+    input {
+      width: 90%;
+      height: 45px;
+    }
+
+    button {
+      height: 45px;
+      margin-top: 2px;
+    }
+
+    p {
+      margin-left: 15px;
+      text-align: left;
+    }
+  }
+}

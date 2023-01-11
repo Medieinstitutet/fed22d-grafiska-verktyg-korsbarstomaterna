@@ -104,6 +104,12 @@ header {
     .burger-menu-button {
       display: none;
     }
+    .pizza3d {
+      z-index: 3;
+      position: absolute;
+      right: 0;
+      top: -30px;
+    }
     .logo-section {
       img {
         height: 70px;

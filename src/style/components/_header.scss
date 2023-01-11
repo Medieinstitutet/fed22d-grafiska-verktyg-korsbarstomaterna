@@ -16,9 +16,13 @@ $neutral-dark-grey: #212121;
 header {
     background-color: $primary-red;
 
-    .logo-section {
+    .nav-container {
         background-color: $primary-red;
         color: $neutral-white;
+        max-height: 90px;
+    }
+
+    .logo-section {
         display: flex;
         width: 70%;
         padding: 20px 0px 20px 50px;
@@ -55,7 +59,7 @@ header {
     .header-background-image {
         background-image: url('/public/hello-i-m-nik-tE2EynlYV-A-unsplash.jpg');
         background-position: center;
-        background-size: 350%;
+        background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
         position: relative;

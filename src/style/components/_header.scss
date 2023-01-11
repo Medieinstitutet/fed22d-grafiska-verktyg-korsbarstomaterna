@@ -78,7 +78,7 @@ header {
     -ms-transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: flex-start;
   }
 
   .header-btn {
@@ -90,13 +90,18 @@ header {
     border-radius: 12px;
     font-size: 1rem;
     text-shadow: 1px 2px 5px $neutral-black;
+    margin: 16px 0;
   }
 
   .quote {
     display: none;
   }
 }
-
+/*
+###
+######
+########## Tablet
+*/
 @media screen and (min-width: 400px) {
   header {
     background-color: $primary-red;
@@ -144,7 +149,7 @@ header {
               text-transform: uppercase;
               display: inline-block;
               position: relative;
-
+              //Animation for underline
               &:hover {
                 &::after {
                   width: 100%;
@@ -173,8 +178,14 @@ header {
     }
     .header-background-image {
       height: calc(100vh - 200px);
+
       .header-buttons-container {
-        left: 70%;
+        right: 58px;
+        left: auto;
+
+        .header-btn {
+          margin: 32px 0;
+        }
       }
     }
   }

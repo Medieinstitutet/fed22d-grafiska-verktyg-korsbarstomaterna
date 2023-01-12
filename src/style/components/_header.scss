@@ -29,21 +29,14 @@ header {
     padding: 20px 0px 20px 50px;
     font-family: 'Satisfy', cursive;
     font-weight: 400;
+
     .menu-pad-desktop {
       display: none;
     }
   }
+
   .pizza3d {
     display: none;
-  }
-  .cookies {
-    font-family: 'Roboto Mono', sans-serif;
-    background-color: $primary-off-white;
-    padding: 2px;
-    font-weight: 400;
-    text-align: center;
-    position: absolute;
-    bottom: -90px;
   }
 
   .cookie-btn-container {
@@ -60,6 +53,7 @@ header {
     text-align: center;
     position: fixed;
     bottom: 0;
+    z-index: 10;
   }
 
   .header-background-image {
@@ -109,6 +103,7 @@ header {
     display: none;
   }
 }
+
 /*
 ###
 ######
@@ -122,9 +117,11 @@ header {
       max-height: 200px;
       height: 200px;
     }
+
     .burger-menu-button {
       display: none;
     }
+
     .pizza3d {
       z-index: 10;
       position: absolute;
@@ -132,6 +129,7 @@ header {
       right: 0;
       top: -30px;
     }
+
     .logo-section {
       img {
         height: 70px;
@@ -143,9 +141,11 @@ header {
         margin: 5px;
         font-size: 64px;
       }
+
       .menu-pad-desktop {
         display: block;
         width: 100%;
+
         ul {
           font-family: 'Roboto Mono', sans-serif;
           font-size: 20px;
@@ -161,6 +161,7 @@ header {
               text-transform: uppercase;
               display: inline-block;
               position: relative;
+
               //Animation for underline
               &:hover {
                 &::after {
@@ -168,6 +169,7 @@ header {
                   left: 0;
                 }
               }
+
               &::after {
                 content: '';
                 position: absolute;
@@ -188,6 +190,7 @@ header {
         }
       }
     }
+
     .header-background-image {
       height: calc(100vh - 200px);
 
@@ -201,6 +204,7 @@ header {
         }
       }
     }
+
     .quote {
       display: block;
       background-color: $secondary-quote-red;
@@ -235,6 +239,7 @@ header {
         right: 30px;
         bottom: 30px;
       }
+
       .quotemark-background {
         // Fel font? Står att det ska vara detta, men är fel.
         font-family: 'Roboto Serif';

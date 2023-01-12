@@ -103,6 +103,7 @@ footer {
   }
 }
 
+
 /* Tablet screen size */
 @media screen and (min-width: 700px) {
   .footer-upper-container {
@@ -151,5 +152,13 @@ footer {
       margin-left: 15px;
       text-align: left;
     }
+  }
+}
+
+
+/* Desktop screen size */
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
   }
 }

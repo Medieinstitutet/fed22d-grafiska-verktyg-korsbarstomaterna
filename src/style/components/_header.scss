@@ -36,8 +36,8 @@ header {
         padding: 2px;
         font-weight: 400;
         text-align: center;
-        position: absolute;
-        bottom: -90px;
+        position: fixed;
+        bottom: 0;
     }
 
     .cookie-btn-container {
@@ -46,7 +46,8 @@ header {
         margin: auto;
     }
 
-    .cookie-btn {
+    .cookie-btn-accept,
+    .cookie-btn-decline {
         border: 4px solid $secondary-pop-up-yellow;
         padding: 5px 20px;
         color: $secondary-pop-up-yellow;
@@ -96,5 +97,6 @@ header {
     header {
         background-color: $primary-red;
     }
-};
-    
+}
+
+;

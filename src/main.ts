@@ -1,11 +1,13 @@
 import toggleMenu from './components/navbar';
 
-const burgerButtonEl = document.querySelector('.burger--menu-button');
+const burgerButtonEl = document.querySelector('.burger-menu-button');
 if (burgerButtonEl) {
   burgerButtonEl.addEventListener('click', toggleMenu);
 }
 
 const pizzaBox = document.querySelector('.pizza-box');
+const cookieBtnAccept = document.querySelector('.cookie-btn-accept');
+const cookieBtnDecline = document.querySelector('.cookie-btn-decline');
 
 const pizzas = [
   {
@@ -21,6 +23,13 @@ const pizzas = [
     name: 'Meat',
   },
 ];
+
+function closeCookiePopup() {
+  const cookieBox = document.querySelector('.cookies') as HTMLDivElement;
+  if (cookieBox) {
+    cookieBox.style.display = 'none';
+  }
+}
 
 function renderPizzas() {
   let pizzaHTML = '';
@@ -39,4 +48,6 @@ function renderPizzas() {
   }
 }
 
+cookieBtnAccept?.addEventListener('click', closeCookiePopup);
+cookieBtnDecline?.addEventListener('click', closeCookiePopup);
 renderPizzas();

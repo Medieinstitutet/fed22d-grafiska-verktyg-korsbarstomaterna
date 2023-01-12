@@ -20,7 +20,6 @@
 
   <body>
     <!--Header section-->
-    <div id="mobileNav" class="burger--menu-nav display-none"></div>
     <header>
       <div class="nav-container">
         <div class="logo-section">
@@ -39,15 +38,30 @@
         </div>
 
         <nav class="burger-menu">
-          <!--Hamburger icon-->
-          <button class="burger-menu-button" aria-label="Mobile menu" aria-expanded="false" aria-controls="mobileNav">
-            <div class="burger-menu-button-outer">
-              <span class="burger-menu-button-bar"></span>
-              <span class="burger-menu-button-bar"></span>
-              <span class="burger-menu-button-bar"></span>
+          <div id="mobileNav" class="burger-menu-nav">
+            <div class="burger-menu-nav-header"></div>
+            <div class="burger-menu-nav-content">
+              <div class="burger-menu-nav-image">
+                <img src="/public/webformat/mainHeroPopUp.png" alt="Pizza" />
+              </div>
+              <div class="burger-menu-nav-links">
+                <a href="#">Menu</a>
+                <a href="#">Our Vision</a>
+                <a href="#">Contact</a>
+              </div>
             </div>
-            <div class="burger--menu-button-inner display-none"><i class="fa-solid fa-utensils"></i></div>
-          </button>
+          </div>
+          <!--Hamburger icon-->
+          <div class="burger-menu-buttons">
+            <button class="burger-menu-button" aria-label="Mobile menu" aria-expanded="false" aria-controls="mobileNav">
+              <div class="burger-menu-button-outer">
+                <span class="burger-menu-button-bar"></span>
+                <span class="burger-menu-button-bar"></span>
+                <span class="burger-menu-button-bar"></span>
+              </div>
+              <div class="burger-menu-button-inner display-none"><i class="fa-solid fa-utensils"></i></div>
+            </button>
+          </div>
         </nav>
         <img class="pizza3d" src="public/3d-pizza.png" alt="Picture of pizza (placeholder)" width="190" height="190" />
       </div>
@@ -75,8 +89,8 @@
           promise you our pizza does!
         </p>
         <div class="cookie-btn-container">
-          <button class="cookie-btn">Accept</button>
-          <button class="cookie-btn">Decline</button>
+          <button class="cookie-btn-accept">Accept</button>
+          <button class="cookie-btn-decline">Decline</button>
         </div>
       </div>
     </header>

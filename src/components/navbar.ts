@@ -1,17 +1,17 @@
 const toggleOverlay = (open: boolean) => {
   const menuOverlayEl = document.querySelector('#mobileNav') as HTMLDivElement;
-  if (open) {
-    menuOverlayEl.classList.remove('display-none');
+  if (!open) {
+    menuOverlayEl.classList.remove('burger-menu-nav-open');
   } else {
-    menuOverlayEl.classList.add('display-none');
+    menuOverlayEl.classList.add('burger-menu-nav-open');
   }
 };
 
 const toggleMenu = () => {
-  const element = document.querySelector('.burger--menu-button');
+  const element = document.querySelector('.burger-menu-button');
   if (element) {
-    const innerButtonEl = element.querySelector('.burger--menu-button-inner') as HTMLDivElement;
-    const outerButtonEl = element.querySelector('.burger--menu-button-outer') as HTMLDivElement;
+    const innerButtonEl = element.querySelector('.burger-menu-button-inner') as HTMLDivElement;
+    const outerButtonEl = element.querySelector('.burger-menu-button-outer') as HTMLDivElement;
 
     if (element.ariaExpanded === 'true') {
       // Menu is currently open

@@ -1,3 +1,13 @@
+const toggleSecondaryOverlay = (open: boolean) => {
+  const burgerNavImageElement = document.querySelector('.burger-menu-nav-image') as HTMLDivElement;
+
+  if (!open) {
+    burgerNavImageElement.classList.remove('burger-menu-nav-image-open');
+  } else {
+    burgerNavImageElement.classList.add('burger-menu-nav-image-open');
+  }
+};
+
 const toggleOverlay = (open: boolean) => {
   const menuOverlayEl = document.querySelector('#mobileNav') as HTMLDivElement;
   if (!open) {
@@ -5,6 +15,13 @@ const toggleOverlay = (open: boolean) => {
   } else {
     menuOverlayEl.classList.add('burger-menu-nav-open');
   }
+
+  menuOverlayEl.addEventListener('transitionend', () => {
+    toggleSecondaryOverlay(open);
+  });
+  menuOverlayEl.removeEventListener('transitionend', () => {
+    toggleSecondaryOverlay(open);
+  });
 };
 
 const toggleMenu = () => {

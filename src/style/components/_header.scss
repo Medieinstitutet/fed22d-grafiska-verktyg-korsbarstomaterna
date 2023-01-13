@@ -17,18 +17,22 @@ $neutral-dark-grey: #212121;
   0% {
     transform: translate(-200%, -50%);
   }
+
   100% {
     transform: translate(-50%, -50%);
   }
 }
+
 @keyframes slideInFromRight {
   0% {
     transform: translate(100%, -50%);
   }
+
   100% {
     transform: translate(-50%, -50%);
   }
 }
+
 header {
   background-color: $primary-red;
 
@@ -260,16 +264,17 @@ header {
 
       .quotemark-background {
         // Fel font? Står att det ska vara detta, men är fel.
-        font-family: 'Roboto Serif';
+        font-family: 'catamaran', sans-serif;
         font-style: normal;
         font-weight: 400;
-        font-size: 550px;
-        line-height: 703px;
+        font-size: 600px;
+        // line-height: 703px;
         text-align: center;
         opacity: 0.2;
         position: absolute;
-        left: -10px;
-        top: -140px;
+        left: 20px;
+        top: -600px;
+        transform: rotate(180deg);
       }
     }
   }

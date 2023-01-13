@@ -13,6 +13,22 @@ $neutral-white: #ffffff;
 $neutral-grey: #a0a0a0;
 $neutral-dark-grey: #212121;
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translate(-200%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translate(100%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
 header {
   background-color: $primary-red;
 
@@ -57,7 +73,7 @@ header {
   }
 
   .header-background-image {
-    background-image: url('/public/hello-i-m-nik-tE2EynlYV-A-unsplash.jpg');
+    background-image: url('/hello-i-m-nik-tE2EynlYV-A-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -74,6 +90,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    animation: 1s ease-out 0s 1 slideInFromRight;
   }
 
   .cookie-btn-accept,
@@ -206,6 +223,7 @@ header {
     }
 
     .quote {
+      animation: 1s ease-out 0s 1 slideInFromLeft;
       display: block;
       background-color: $secondary-quote-red;
       opacity: 0.9;

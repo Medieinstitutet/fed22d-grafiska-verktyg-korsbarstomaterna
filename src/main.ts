@@ -36,7 +36,7 @@ function renderPizzas() {
   pizzas.forEach((pizza) => {
     pizzaHTML += `
       <div class="card">
-        <img src="public/webformat/cardPizza.jpg" alt="${pizza.name} pizza" />
+        <img src="webformat/cardPizza.jpg" alt="${pizza.name} pizza" />
         <h2>${pizza.name}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur elit, sed ut aliqua.</p>
         <button>Menu</button>

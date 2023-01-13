@@ -29,14 +29,6 @@ $neutral-dark-grey: #212121;
     transform: translate(-50%, -50%);
   }
 }
-@keyframes slideInFromTop {
-  0% {
-    transform: translate(0, -100%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 header {
   background-color: $primary-red;
 
@@ -44,7 +36,6 @@ header {
     background-color: $primary-red;
     color: $neutral-white;
     max-height: 90px;
-    animation: 1s ease-out 0s 1 slideInFromTop;
   }
 
   .logo-section {

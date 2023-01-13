@@ -13,6 +13,30 @@ $neutral-white: #ffffff;
 $neutral-grey: #a0a0a0;
 $neutral-dark-grey: #212121;
 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translate(-200%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translate(100%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translate(0, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 header {
   background-color: $primary-red;
 
@@ -20,6 +44,7 @@ header {
     background-color: $primary-red;
     color: $neutral-white;
     max-height: 90px;
+    animation: 1s ease-out 0s 1 slideInFromTop;
   }
 
   .logo-section {
@@ -80,6 +105,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    animation: 1s ease-out 0s 1 slideInFromRight;
   }
 
   .cookie-btn-accept,
@@ -202,6 +228,7 @@ header {
       }
     }
     .quote {
+      animation: 1s ease-out 0s 1 slideInFromLeft;
       display: block;
       background-color: $secondary-quote-red;
       opacity: 0.9;

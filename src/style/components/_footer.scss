@@ -83,7 +83,7 @@ footer {
       height: 100%;
       width: 61px;
       margin: 0;
-      border-radius: 0 12px 12px 0;
+      border-radius: 0 13px 13px 0;
       font-family: 'Roboto Mono';
       font-style: normal;
       font-weight: 700;
@@ -160,5 +160,60 @@ footer {
 @media screen and (min-width: 1024px) {
   footer {
     display: flex;
+
+    .footer-upper-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      order: 3;
+      margin-top: 0px;
+      gap: 30px;
+
+      .left-side {
+        order: 1;
+      }
+
+      .fa-clock {
+        margin-left: 80px;
+        top: 70%;
+        transform: translate(10%, -70%);
+      }
+
+      .fa-phone {
+        margin-left: 80px;
+      }
+    }
+
+    .footer-middle-container {
+      padding: 20px;
+      order: 2;
+
+      iframe {
+        width: 500px;
+        height: 375px;
+        border-radius: 13px;
+      }
+    }
+
+    .footer-bottom-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      order: 1;
+      margin-top: 0px;
+
+      p {
+        margin-left: 112px;
+      }
+
+      input {
+        width: 350px;
+      }
+
+      .social-media {
+        padding-top: 20px;
+        justify-content: center;
+      }
+    }
   }
 }

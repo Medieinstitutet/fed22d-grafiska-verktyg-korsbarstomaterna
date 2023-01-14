@@ -41,7 +41,7 @@ function renderPizzas() {
       </div>`;
   });
 
-  if (pizzaBox != null) {
+  if (pizzaBox) {
     pizzaBox.innerHTML = pizzaHTML;
   }
 }

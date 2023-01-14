@@ -1,0 +1,155 @@
+@use '../abstracts' as *;
+
+footer {
+  display: grid;
+  background-color: $white-100;
+  grid-template-rows: 7;
+  padding: 38px;
+
+  h4 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-family: 'Satisfy', cursive;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 16px;
+    margin-left: auto;
+    margin-right: auto;
+
+    strong,
+    span {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  div {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 400;
+
+    p:nth-child(3) {
+      text-align: left;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    i {
+      position: absolute;
+      left: 20px;
+      font-size: 43px;
+    }
+
+    .fa-phone {
+      transform: translateY(-18px);
+    }
+
+    .fa-clock {
+      transform: translateY(18px);
+    }
+  }
+
+  form {
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      height: 100%;
+      margin: 0;
+      width: 250px;
+      margin-right: -61px;
+      border: none;
+      border-radius: 13px;
+      outline-color: $green-100;
+      padding-left: 20px;
+      font-family: 'Roboto Mono';
+    }
+
+    button {
+      background-color: $green-100;
+      border: none;
+      height: 100%;
+      width: 61px;
+      margin: 0;
+      border-radius: 0 12px 12px 0;
+      font-family: 'Roboto Mono';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      color: #ffffff;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 37px;
+
+    i {
+      position: static;
+    }
+  }
+}
+
+/* Tablet screen size */
+@media screen and (min-width: 700px) {
+  .footer-upper-container {
+    display: flex;
+    max-width: 850px;
+    margin: auto;
+
+    .phone-number {
+      font-family: 'Roboto Mono';
+    }
+
+    .open-hours {
+      margin-top: 45px;
+    }
+
+    .fa-clock {
+      top: 50%;
+      transform: translate(10%, -50%);
+    }
+  }
+
+  .footer-bottom-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 850px;
+    margin: auto;
+
+    .social-media {
+      display: flex;
+      align-items: flex-end;
+      justify-content: end;
+      margin-right: 15px;
+    }
+
+    input {
+      width: 90%;
+      height: 45px;
+    }
+
+    button {
+      height: 45px;
+      margin-top: 2px;
+    }
+
+    p {
+      margin-left: 15px;
+      text-align: left;
+    }
+  }
+}

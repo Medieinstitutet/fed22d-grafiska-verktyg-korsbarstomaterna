@@ -6,8 +6,8 @@ if (burgerButtonEl) {
 }
 
 const pizzaBox = document.querySelector('.pizza-box');
-const cookieBtnAccept = document.querySelector('.cookie-btn-accept');
-const cookieBtnDecline = document.querySelector('.cookie-btn-decline');
+const cookieBtnAccept = document.querySelector('#cookiesAccept');
+const cookieBtnDecline = document.querySelector('#cookiesDecline');
 
 const pizzas = [
   {

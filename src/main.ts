@@ -26,9 +26,7 @@ const pizzas = [
 
 function closeCookiePopup() {
   const cookieBox = document.querySelector('.cookies') as HTMLDivElement;
-  if (cookieBox) {
-    cookieBox.style.display = 'none';
-  }
+  cookieBox.style.display = 'none';
 }
 
 function renderPizzas() {

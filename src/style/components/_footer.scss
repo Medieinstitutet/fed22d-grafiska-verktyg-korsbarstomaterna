@@ -37,6 +37,15 @@ footer {
     margin-bottom: 32px;
     font-size: 16px;
     font-weight: 400;
+    .left-side {
+      div {
+        .phone-number {
+          a[href^='tel'] {
+            color: black;
+          }
+        }
+      }
+    }
 
     p:nth-child(3) {
       text-align: left;
@@ -46,7 +55,7 @@ footer {
 
     i {
       position: absolute;
-      left: 20px;
+      left: 0;
       font-size: 43px;
     }
 
@@ -72,23 +81,33 @@ footer {
       margin-right: -61px;
       border: none;
       border-radius: 13px;
-      outline-color: $green-0;
+      outline-color: $green-100;
       padding-left: 20px;
       font-family: 'Roboto Mono';
     }
 
-    button {
-      background-color: $green-0;
+    input[type='submit'] {
+      background-color: $green-100;
       border: none;
       height: 100%;
-      width: 61px;
+      width: 60px;
       margin: 0;
       border-radius: 0 13px 13px 0;
+
       font-family: 'Roboto Mono';
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       color: #ffffff;
+
+      &:hover {
+        background-color: $green-200;
+      }
+
+      &:disabled {
+        background-color: $grey-0;
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -110,10 +129,6 @@ footer {
     display: flex;
     max-width: 850px;
     margin: auto;
-
-    .phone-number {
-      font-family: 'Roboto Mono';
-    }
 
     .open-hours {
       margin-top: 45px;
@@ -143,9 +158,14 @@ footer {
       height: 45px;
     }
 
-    button {
+    input[type='submit'] {
+      position: relative;
+      bottom: 1px;
+      right: 10px;
       height: 45px;
+      width: 70px;
       margin-top: 2px;
+      cursor: pointer;
     }
 
     p {

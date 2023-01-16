@@ -5,7 +5,7 @@ main {
   display: flex;
   flex-direction: column;
   color: white;
-  padding: 20px;
+  padding: 2rem;
 
   .amore {
     max-width: fit-content;
@@ -32,7 +32,7 @@ main {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   padding: 20px 10px 20px 10px;
-  background: $green-100;
+  background: $green-200;
   text-align: center;
   margin: 30px auto;
   font-family: 'Roboto Mono', sans-serif;
@@ -58,6 +58,8 @@ main {
     background: $white-100;
     font-size: 1.5rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
 
     &:hover {
       background: $green-100;
@@ -101,6 +103,11 @@ main {
     flex-direction: row;
   }
 
+  .stroke {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
   .card {
     width: 335px;
     height: 600px;
@@ -110,7 +117,7 @@ main {
     width: 400px;
     height: 700px;
     order: 2;
-    margin: 0 50px 0 50px;
+    margin: 0 15px 0 15px;
   }
 
   .card:nth-child(2) {

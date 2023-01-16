@@ -6,8 +6,11 @@ if (burgerButtonEl) {
 }
 
 const pizzaBox = document.querySelector('.pizza-box');
-const cookieBtnAccept = document.querySelector('.cookie-btn-accept');
-const cookieBtnDecline = document.querySelector('.cookie-btn-decline');
+const cookieBtnAccept = document.querySelector('#cookiesAccept');
+const cookieBtnDecline = document.querySelector('#cookiesDecline');
+const emailInput = document.querySelector('#emailInput') as HTMLInputElement;
+const emailSubmit = document.querySelector('#emailSubmit') as HTMLButtonElement;
+
 
 const pizzas = [
   {
@@ -26,9 +29,7 @@ const pizzas = [
 
 function closeCookiePopup() {
   const cookieBox = document.querySelector('.cookies') as HTMLDivElement;
-  if (cookieBox) {
-    cookieBox.style.display = 'none';
-  }
+  cookieBox.style.display = 'none';
 }
 
 function renderPizzas() {
@@ -36,18 +37,32 @@ function renderPizzas() {
   pizzas.forEach((pizza) => {
     pizzaHTML += `
       <div class="card">
-        <img src="public/webformat/cardPizza.jpg" alt="${pizza.name} pizza" />
+        <img src="webformat/cardPizza.jpg" alt="${pizza.name} pizza" />
         <h2>${pizza.name}</h2>
         <p>Lorem ipsum dolor sit amet, consectetur elit, sed ut aliqua.</p>
         <button>Menu</button>
       </div>`;
   });
 
-  if (pizzaBox != null) {
+  if (pizzaBox) {
     pizzaBox.innerHTML = pizzaHTML;
+  }
+}
+
+function validateEmail() {
+  const email = emailInput.value;
+  const emailRegex =
+    // eslint-disable-next-line
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (emailRegex.test(email)) {
+    emailSubmit.disabled = false;
+  } else {
+    emailSubmit.disabled = true;
   }
 }
 
 cookieBtnAccept?.addEventListener('click', closeCookiePopup);
 cookieBtnDecline?.addEventListener('click', closeCookiePopup);
+emailInput?.addEventListener('keyup', validateEmail);
 renderPizzas();

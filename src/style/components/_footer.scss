@@ -175,12 +175,13 @@ footer {
 
       .fa-clock {
         margin-left: 80px;
-        top: 70%;
-        transform: translate(10%, -70%);
+        top: 80%;
+        transform: translate(10%, -80%);
       }
 
       .fa-phone {
         margin-left: 80px;
+        margin-top: -8px;
       }
     }
 
@@ -192,6 +193,12 @@ footer {
         width: 500px;
         height: 375px;
         border-radius: 13px;
+        box-shadow: 6px 6px 6px rgb(0 0 0 / 0.2);
+      }
+
+      .map-title {
+        text-align: left;
+        margin-left: 37px;
       }
     }
 

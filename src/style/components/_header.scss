@@ -250,12 +250,13 @@ header {
         font-style: normal;
         font-weight: 400;
         font-size: 600px;
+        height: 400px;
         // line-height: 703px;
         text-align: center;
         opacity: 0.2;
         position: absolute;
         left: 20px;
-        top: -600px;
+        top: 0;
         transform: rotate(180deg);
       }
     }

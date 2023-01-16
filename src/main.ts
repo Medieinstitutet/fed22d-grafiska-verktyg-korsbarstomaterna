@@ -6,10 +6,11 @@ if (burgerButtonEl) {
 }
 
 const pizzaBox = document.querySelector('.pizza-box');
-const cookieBtnAccept = document.querySelector('.cookie-btn-accept');
-const cookieBtnDecline = document.querySelector('.cookie-btn-decline');
+const cookieBtnAccept = document.querySelector('#cookiesAccept');
+const cookieBtnDecline = document.querySelector('#cookiesDecline');
 const emailInput = document.querySelector('#emailInput') as HTMLInputElement;
 const emailSubmit = document.querySelector('#emailSubmit') as HTMLButtonElement;
+
 
 const pizzas = [
   {
@@ -28,9 +29,7 @@ const pizzas = [
 
 function closeCookiePopup() {
   const cookieBox = document.querySelector('.cookies') as HTMLDivElement;
-  if (cookieBox) {
-    cookieBox.style.display = 'none';
-  }
+  cookieBox.style.display = 'none';
 }
 
 function renderPizzas() {
@@ -45,7 +44,7 @@ function renderPizzas() {
       </div>`;
   });
 
-  if (pizzaBox != null) {
+  if (pizzaBox) {
     pizzaBox.innerHTML = pizzaHTML;
   }
 }

@@ -122,7 +122,9 @@ footer {
     margin: auto;
 
     .phone-number {
-      color: black;
+      a[href^=tel] {
+        color: black;
+      }
     }
 
     .open-hours {

@@ -8,6 +8,9 @@ if (burgerButtonEl) {
 const pizzaBox = document.querySelector('.pizza-box');
 const cookieBtnAccept = document.querySelector('#cookiesAccept');
 const cookieBtnDecline = document.querySelector('#cookiesDecline');
+const emailInput = document.querySelector('#emailInput') as HTMLInputElement;
+const emailSubmit = document.querySelector('#emailSubmit') as HTMLButtonElement;
+
 
 const pizzas = [
   {
@@ -46,6 +49,20 @@ function renderPizzas() {
   }
 }
 
+function validateEmail() {
+  const email = emailInput.value;
+  const emailRegex =
+    // eslint-disable-next-line
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+  if (emailRegex.test(email)) {
+    emailSubmit.disabled = false;
+  } else {
+    emailSubmit.disabled = true;
+  }
+}
+
 cookieBtnAccept?.addEventListener('click', closeCookiePopup);
 cookieBtnDecline?.addEventListener('click', closeCookiePopup);
+emailInput?.addEventListener('keyup', validateEmail);
 renderPizzas();

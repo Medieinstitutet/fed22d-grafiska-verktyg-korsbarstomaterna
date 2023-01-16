@@ -77,19 +77,30 @@ footer {
       font-family: 'Roboto Mono';
     }
 
-    button {
+    input[type=submit] {
       background-color: $green-100;
       border: none;
       height: 100%;
-      width: 61px;
+      width: 60px;
       margin: 0;
-      border-radius: 0 12px 12px 0;
+      padding-left: 5px;
+      border-radius: 0 11px 11px 0;
       font-family: 'Roboto Mono';
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       color: #ffffff;
+
+      &:hover {
+        background-color: $green-200;
+      }
+
+      &:disabled {
+        background-color: $grey-0;
+        cursor: not-allowed;
+      }
     }
+
   }
 
   .social-media {
@@ -142,10 +153,16 @@ footer {
       height: 45px;
     }
 
-    button {
+    input[type=submit] {
+      position: relative;
+      bottom: 1px;
+      right: 10px;
       height: 45px;
+      width: 70px;
       margin-top: 2px;
+      cursor: pointer;
     }
+
 
     p {
       margin-left: 15px;

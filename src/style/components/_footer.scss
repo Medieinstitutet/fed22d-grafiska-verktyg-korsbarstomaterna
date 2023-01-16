@@ -37,6 +37,15 @@ footer {
     margin-bottom: 32px;
     font-size: 16px;
     font-weight: 400;
+    .left-side {
+      div {
+        .phone-number {
+          a[href^='tel'] {
+            color: black;
+          }
+        }
+      }
+    }
 
     p:nth-child(3) {
       text-align: left;
@@ -77,7 +86,7 @@ footer {
       font-family: 'Roboto Mono';
     }
 
-    input[type=submit] {
+    input[type='submit'] {
       background-color: $green-100;
       border: none;
       height: 100%;
@@ -100,7 +109,6 @@ footer {
         cursor: not-allowed;
       }
     }
-
   }
 
   .social-media {
@@ -120,12 +128,6 @@ footer {
     display: flex;
     max-width: 850px;
     margin: auto;
-
-    .phone-number {
-      a[href^=tel] {
-        color: black;
-      }
-    }
 
     .open-hours {
       margin-top: 45px;
@@ -155,7 +157,7 @@ footer {
       height: 45px;
     }
 
-    input[type=submit] {
+    input[type='submit'] {
       position: relative;
       bottom: 1px;
       right: 10px;
@@ -164,7 +166,6 @@ footer {
       margin-top: 2px;
       cursor: pointer;
     }
-
 
     p {
       margin-left: 15px;

@@ -194,31 +194,35 @@ footer {
   footer {
     .footer-container {
       display: flex;
+      gap: 45px;
       max-width: 1600px;
       margin: auto;
     }
 
     .footer-upper-container {
-      padding: 20px;
+      padding-top: 20px;
       display: flex;
       flex-direction: column;
       order: 3;
       margin-top: 0px;
       gap: 30px;
-      //background-color: aquamarine;
+
+      .right-side {
+        margin-top: -30px;
+      }
 
       .left-side {
         order: 1;
       }
 
       .fa-clock {
-        margin-left: 10%;
+        margin-left: 10px;
         top: 80%;
         transform: translate(10%, -80%);
       }
 
       .fa-phone {
-        margin-left: 80px;
+        margin-left: 10px;
         margin-top: -8px;
       }
     }
@@ -248,7 +252,6 @@ footer {
       flex-direction: column;
       order: 1;
       margin-top: 0px;
-      background-color: brown;
 
       .sign-up-text {
         margin-left: 5%;
@@ -266,6 +269,8 @@ footer {
       .social-media {
         padding-top: 20px;
         justify-content: center;
+        margin: auto;
+        max-width: 90%;
       }
     }
   }

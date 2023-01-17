@@ -26,12 +26,6 @@ const pizzas = [
   },
 ];
 
-// const onCardMouseMove = (event: MouseEvent, card: HTMLDivElement) => {
-//   const ax = -(window.innerWidth / 2 - event.pageX) / 20;
-//   const ay = -(window.innerHeight / 2 - event.pageY) / 20;
-//   card.style.transform = `rotateY(${ax}deg) rotateX(${ay}deg)`;
-// };
-
 const createPizzaHover = () => {
   const screenWidth = window.innerWidth;
 
@@ -43,7 +37,6 @@ const createPizzaHover = () => {
       for (const item of pizzaCardEls) {
         const card = item as HTMLDivElement;
 
-        // card.addEventListener('mousemove', (e) => onCardMouseMove(e, card));
         card.addEventListener('mousemove', (e) => {
           const cardWidth = card.offsetWidth;
           const cardHeight = card.offsetHeight;
@@ -82,6 +75,7 @@ function renderPizzas() {
   if (pizzaBox) {
     pizzaBox.innerHTML = pizzaHTML;
 
+    // Create the hover effect after load
     createPizzaHover();
   }
 }
@@ -98,13 +92,6 @@ function validateEmail() {
     emailSubmit.disabled = true;
   }
 }
-
-// const pizzaCardBoxEl = document.querySelector('.pizza-box') as HTMLDivElement;
-
-// const cardMovemement = (event: MouseEvent) => {
-//   let ax = -(window.innerWidth / 2 - event.page) / 20;
-//   let ay = -(window.innerHeight / 2 - event.pageY) / 20;
-// }
 
 cookieBtnAccept?.addEventListener('click', closeCookiePopup);
 cookieBtnDecline?.addEventListener('click', closeCookiePopup);

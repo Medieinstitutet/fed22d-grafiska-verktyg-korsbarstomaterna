@@ -33,6 +33,16 @@ $neutral-dark-grey: #212121;
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 header {
   background-color: $primary-red;
 
@@ -66,6 +76,9 @@ header {
     background-repeat: no-repeat;
     height: calc(100vh - 90px);
     position: relative;
+    animation: fadeIn ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
   .header-buttons-container {

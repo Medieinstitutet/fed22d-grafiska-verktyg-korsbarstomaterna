@@ -11,7 +11,6 @@ const cookieBtnDecline = document.querySelector('#cookiesDecline');
 const emailInput = document.querySelector('#emailInput') as HTMLInputElement;
 const emailSubmit = document.querySelector('#emailSubmit') as HTMLButtonElement;
 
-
 const pizzas = [
   {
     id: 1,
@@ -26,6 +25,42 @@ const pizzas = [
     name: 'Meat',
   },
 ];
+
+// const onCardMouseMove = (event: MouseEvent, card: HTMLDivElement) => {
+//   const ax = -(window.innerWidth / 2 - event.pageX) / 20;
+//   const ay = -(window.innerHeight / 2 - event.pageY) / 20;
+//   card.style.transform = `rotateY(${ax}deg) rotateX(${ay}deg)`;
+// };
+
+const createPizzaHover = () => {
+  const screenWidth = window.innerWidth;
+
+  // Check if browser is desktop size (1024px width)
+  if (screenWidth >= 1024) {
+    const pizzaCardEls = document.querySelectorAll('.card');
+
+    if (pizzaCardEls) {
+      for (const item of pizzaCardEls) {
+        const card = item as HTMLDivElement;
+
+        // card.addEventListener('mousemove', (e) => onCardMouseMove(e, card));
+        card.addEventListener('mousemove', (e) => {
+          const cardWidth = card.offsetWidth;
+          const cardHeight = card.offsetHeight;
+          const centerX = card.offsetLeft + cardWidth / 2;
+          const centerY = card.offsetTop + cardHeight / 2;
+          const mouseX = e.clientX - centerX;
+          const mouseY = e.clientY - centerY;
+
+          const rotateX = ((+1 * 4 * mouseY) / (cardHeight / 2) + 10).toFixed(2);
+          const rotateY = ((-1 * 4 * mouseX) / (cardWidth / 2)).toFixed(2);
+
+          card.style.transform = `perspective(750px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+      }
+    }
+  }
+};
 
 function closeCookiePopup() {
   const cookieBox = document.querySelector('.cookies') as HTMLDivElement;
@@ -46,6 +81,8 @@ function renderPizzas() {
 
   if (pizzaBox) {
     pizzaBox.innerHTML = pizzaHTML;
+
+    createPizzaHover();
   }
 }
 
@@ -61,6 +98,13 @@ function validateEmail() {
     emailSubmit.disabled = true;
   }
 }
+
+// const pizzaCardBoxEl = document.querySelector('.pizza-box') as HTMLDivElement;
+
+// const cardMovemement = (event: MouseEvent) => {
+//   let ax = -(window.innerWidth / 2 - event.page) / 20;
+//   let ay = -(window.innerHeight / 2 - event.pageY) / 20;
+// }
 
 cookieBtnAccept?.addEventListener('click', closeCookiePopup);
 cookieBtnDecline?.addEventListener('click', closeCookiePopup);

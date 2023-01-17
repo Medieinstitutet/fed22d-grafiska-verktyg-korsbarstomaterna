@@ -11,7 +11,6 @@ const cookieBtnDecline = document.querySelector('#cookiesDecline');
 const emailInput = document.querySelector('#emailInput') as HTMLInputElement;
 const emailSubmit = document.querySelector('#emailSubmit') as HTMLButtonElement;
 
-
 const pizzas = [
   {
     id: 1,
@@ -26,6 +25,35 @@ const pizzas = [
     name: 'Meat',
   },
 ];
+
+const createPizzaHover = () => {
+  const screenWidth = window.innerWidth;
+
+  // Check if browser is desktop size (1024px width)
+  if (screenWidth >= 1024) {
+    const pizzaCardEls = document.querySelectorAll('.card');
+
+    if (pizzaCardEls) {
+      for (const item of pizzaCardEls) {
+        const card = item as HTMLDivElement;
+
+        card.addEventListener('mousemove', (e) => {
+          const cardWidth = card.offsetWidth;
+          const cardHeight = card.offsetHeight;
+          const centerX = card.offsetLeft + cardWidth / 2;
+          const centerY = card.offsetTop + cardHeight / 2;
+          const mouseX = e.clientX - centerX;
+          const mouseY = e.clientY - centerY;
+
+          const rotateX = ((+1 * 4 * mouseY) / (cardHeight / 2) + 10).toFixed(2);
+          const rotateY = ((-1 * 4 * mouseX) / (cardWidth / 2)).toFixed(2);
+
+          card.style.transform = `perspective(750px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+      }
+    }
+  }
+};
 
 function closeCookiePopup() {
   const cookieBox = document.querySelector('.cookies') as HTMLDivElement;
@@ -46,6 +74,9 @@ function renderPizzas() {
 
   if (pizzaBox) {
     pizzaBox.innerHTML = pizzaHTML;
+
+    // Create the hover effect after load
+    createPizzaHover();
   }
 }
 

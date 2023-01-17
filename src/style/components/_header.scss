@@ -1,18 +1,4 @@
-/* Colors */
-$primary-green: #009246;
-$primary-red: #af372c;
-$primary-off-white: #f1f2f1;
-
-$secondary-hover-green: #006530;
-$secondary-hover-red: #881c24;
-$secondary-quote-red: #e76262e5;
-$secondary-pop-up-yellow: #d4ab17;
-
-$neutral-black: #000000;
-$neutral-white: #ffffff;
-$neutral-grey: #a0a0a0;
-$neutral-dark-grey: #212121;
-
+@use '../abstracts' as *;
 @keyframes slideInFromLeft {
   0% {
     transform: translate(-200%, -50%);
@@ -43,12 +29,21 @@ $neutral-dark-grey: #212121;
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
 header {
-  background-color: $primary-red;
+  background-color: $red-0;
 
   .nav-container {
-    background-color: $primary-red;
-    color: $neutral-white;
+    background-color: $red-0;
+    color: $white-0;
     max-height: 90px;
   }
 
@@ -70,15 +65,41 @@ header {
   }
 
   .header-background-image {
-    background-image: url('/webformat/hello-i-m-nik-tE2EynlYV-A-unsplash.jpg');
+    background-image: url('/webformat/mainHero.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - 90px);
     position: relative;
+    
+    // Kanske inte funkar
     animation: fadeIn ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    // Slut på kanske dålig kod
+    
+    overflow: hidden;
+    .pizzaPopup {
+      position: absolute;
+      top: -90px;
+      left: -2.5%;
+      width: 105%;
+      height: auto;
+      opacity: 1;
+      transform-origin: 50% 20%;
+      transform: rotate(0);
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        animation-name: rotate;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        left: -5%;
+        width: 110%;
+        transition: 0.5s all ease-in-out;
+      }
+    }
   }
 
   .header-buttons-container {
@@ -94,24 +115,24 @@ header {
   }
 
   .header-btn {
-    background-color: $primary-green;
+    background-color: $green-0;
     border: none;
     font-family: 'Roboto Mono', sans-serif;
-    color: $neutral-white;
+    color: $white-0;
     padding: 15px 35px;
     border-radius: 12px;
     font-size: 1rem;
-    text-shadow: 1px 2px 5px $neutral-black;
+    text-shadow: 1px 2px 5px $black;
     margin: 16px 0;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
 
     &:hover {
-      background-color: $secondary-hover-green;
+      background-color: $green-100;
     }
 
     &:active {
-      background-color: $primary-green;
+      background-color: $green-0;
     }
   }
 
@@ -127,7 +148,7 @@ header {
 */
 @media screen and (min-width: 700px) {
   header {
-    background-color: $primary-red;
+    background-color: $red-0;
 
     .nav-container {
       max-height: 200px;
@@ -172,7 +193,7 @@ header {
             list-style: none;
 
             a {
-              color: $neutral-white;
+              color: $white-0;
               text-decoration: none;
               text-transform: uppercase;
               display: inline-block;
@@ -195,7 +216,7 @@ header {
                 height: 2px;
                 background: #333;
                 transition: all 0.35s ease-out;
-                background-color: $neutral-white;
+                background-color: $white-0;
               }
             }
           }
@@ -224,7 +245,7 @@ header {
     .quote {
       animation: 1s ease-out 0s 1 slideInFromLeft;
       display: block;
-      background-color: $secondary-quote-red;
+      background-color: $red-200;
       opacity: 0.9;
       position: absolute;
       top: 65%;
@@ -234,7 +255,7 @@ header {
       transform: translate(-50%, -50%);
       box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.25);
       border-radius: 30px;
-      color: $neutral-white;
+      color: $white-0;
 
       blockquote {
         font-size: 32px;
@@ -263,12 +284,13 @@ header {
         font-style: normal;
         font-weight: 400;
         font-size: 600px;
+        height: 400px;
         // line-height: 703px;
         text-align: center;
         opacity: 0.2;
         position: absolute;
         left: 20px;
-        top: -600px;
+        top: 0;
         transform: rotate(180deg);
       }
     }

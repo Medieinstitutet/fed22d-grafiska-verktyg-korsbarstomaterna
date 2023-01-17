@@ -120,24 +120,36 @@ footer {
       position: static;
     }
   }
+
+  .footer-middle-container {
+    display: none;
+  }
 }
 
 
 /* Tablet screen size */
 @media screen and (min-width: 700px) {
   .footer-upper-container {
-    display: flex;
+    display: grid;
+    gap: 200px;
+    grid-template-columns: auto auto;
     max-width: 850px;
-    margin: auto;
+    margin-bottom: 0px;
+    
 
     .open-hours {
+      
       margin-top: 45px;
     }
 
     .fa-clock {
       top: 50%;
-      transform: translate(10%, -50%);
+      transform: translate(-100%, -50%);
     }
+  }
+
+  .footer-middle-container {
+    display: none;
   }
 
   .footer-bottom-container {
@@ -177,9 +189,13 @@ footer {
 
 
 /* Desktop screen size */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   footer {
-    display: flex;
+    .footer-container {
+      display: flex;
+      max-width: 1600px;
+      margin: auto;
+    }
 
     .footer-upper-container {
       padding: 20px;
@@ -188,13 +204,14 @@ footer {
       order: 3;
       margin-top: 0px;
       gap: 30px;
+      //background-color: aquamarine;
 
       .left-side {
         order: 1;
       }
 
       .fa-clock {
-        margin-left: 80px;
+        margin-left: 10%;
         top: 80%;
         transform: translate(10%, -80%);
       }
@@ -208,33 +225,41 @@ footer {
     .footer-middle-container {
       padding: 20px;
       order: 2;
+      display: block;
+      //background-color: aqua;
+      max-width: 100%;
 
       iframe {
-        width: 500px;
-        height: 375px;
+        max-width: 100%;
+        max-height: auto;
         border-radius: 13px;
         box-shadow: 6px 6px 6px rgb(0 0 0 / 0.2);
       }
 
       .map-title {
         text-align: left;
-        margin-left: 37px;
       }
     }
 
     .footer-bottom-container {
-      padding: 20px;
+      padding-top: 20px;
       display: flex;
       flex-direction: column;
       order: 1;
       margin-top: 0px;
+      background-color: brown;
 
-      p {
-        margin-left: 112px;
+      .sign-up-text {
+       margin-left: 5%;
       }
 
+      p {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      
       input {
-        width: 350px;
+        width: 90%;
       }
 
       .social-media {

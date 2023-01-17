@@ -37,6 +37,7 @@ footer {
     margin-bottom: 32px;
     font-size: 16px;
     font-weight: 400;
+
     .left-side {
       div {
         .phone-number {
@@ -135,10 +136,10 @@ footer {
     grid-template-columns: auto auto;
     max-width: 850px;
     margin-bottom: 0px;
-    
+    margin: 0 auto;
+    padding: 15px;
 
     .open-hours {
-      
       margin-top: 45px;
     }
 
@@ -250,14 +251,14 @@ footer {
       background-color: brown;
 
       .sign-up-text {
-       margin-left: 5%;
+        margin-left: 5%;
       }
 
       p {
         margin-left: 0px;
         margin-right: 0px;
       }
-      
+
       input {
         width: 90%;
       }

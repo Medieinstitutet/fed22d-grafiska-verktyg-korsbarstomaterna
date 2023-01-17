@@ -18,7 +18,14 @@
     transform: translate(-50%, -50%);
   }
 }
-
+@keyframes rotate {
+  0% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
 header {
   background-color: $red-0;
 
@@ -52,6 +59,28 @@ header {
     background-repeat: no-repeat;
     height: calc(100vh - 90px);
     position: relative;
+    overflow: hidden;
+    .pizzaPopup {
+      position: absolute;
+      top: -90px;
+      left: -2.5%;
+      width: 105%;
+      height: auto;
+      opacity: 1;
+      transform-origin: 50% 20%;
+      transform: rotate(0);
+      transition: 0.2s all ease-in-out;
+      &:hover {
+        animation-name: rotate;
+        animation-duration: 0.7s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        left: -5%;
+        width: 110%;
+        transition: 0.5s all ease-in-out;
+      }
+    }
   }
 
   .header-buttons-container {

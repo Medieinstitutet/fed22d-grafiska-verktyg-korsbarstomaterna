@@ -37,6 +37,7 @@ footer {
     margin-bottom: 32px;
     font-size: 16px;
     font-weight: 400;
+
     .left-side {
       div {
         .phone-number {
@@ -120,15 +121,23 @@ footer {
       position: static;
     }
   }
+
+  .footer-middle-container {
+    display: none;
+  }
 }
 
 
 /* Tablet screen size */
 @media screen and (min-width: 700px) {
   .footer-upper-container {
-    display: flex;
+    display: grid;
+    gap: 200px;
+    grid-template-columns: auto auto;
     max-width: 850px;
-    margin: auto;
+    margin-bottom: 0px;
+    margin: 0 auto;
+    padding: 15px;
 
     .open-hours {
       margin-top: 45px;
@@ -136,8 +145,12 @@ footer {
 
     .fa-clock {
       top: 50%;
-      transform: translate(10%, -50%);
+      transform: translate(-100%, -50%);
     }
+  }
+
+  .footer-middle-container {
+    display: none;
   }
 
   .footer-bottom-container {
@@ -177,30 +190,39 @@ footer {
 
 
 /* Desktop screen size */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   footer {
-    display: flex;
+    .footer-container {
+      display: flex;
+      gap: 45px;
+      max-width: 1600px;
+      margin: auto;
+    }
 
     .footer-upper-container {
-      padding: 20px;
+      padding-top: 20px;
       display: flex;
       flex-direction: column;
       order: 3;
       margin-top: 0px;
       gap: 30px;
 
+      .right-side {
+        margin-top: -30px;
+      }
+
       .left-side {
         order: 1;
       }
 
       .fa-clock {
-        margin-left: 80px;
+        margin-left: 10px;
         top: 80%;
         transform: translate(10%, -80%);
       }
 
       .fa-phone {
-        margin-left: 80px;
+        margin-left: 10px;
         margin-top: -8px;
       }
     }
@@ -208,38 +230,47 @@ footer {
     .footer-middle-container {
       padding: 20px;
       order: 2;
+      display: block;
+      //background-color: aqua;
+      max-width: 100%;
 
       iframe {
-        width: 500px;
-        height: 375px;
+        max-width: 100%;
+        max-height: auto;
         border-radius: 13px;
         box-shadow: 6px 6px 6px rgb(0 0 0 / 0.2);
       }
 
       .map-title {
         text-align: left;
-        margin-left: 37px;
       }
     }
 
     .footer-bottom-container {
-      padding: 20px;
+      padding-top: 20px;
       display: flex;
       flex-direction: column;
       order: 1;
       margin-top: 0px;
 
+      .sign-up-text {
+        margin-left: 5%;
+      }
+
       p {
-        margin-left: 112px;
+        margin-left: 0px;
+        margin-right: 0px;
       }
 
       input {
-        width: 350px;
+        width: 90%;
       }
 
       .social-media {
         padding-top: 20px;
         justify-content: center;
+        margin: auto;
+        max-width: 90%;
       }
     }
   }

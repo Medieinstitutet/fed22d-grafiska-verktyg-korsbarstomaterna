@@ -21,3 +21,26 @@ Design:
 - Jenny Svensson [@Jenny-Svensson](https://github.com/Jenny-Svensson)
 - Alen Gusinac [@alengusinac](https://github.com/alengusinac)
 
+Code:
+- Alexander Pressfelt [@AcclaimedAP](https://github.com/AcclaimedAP)
+- Viktor Melin [@viktormelin](https://github.com/viktormelin)
+- Nicholas Peters [@Redicholas](https://github.com/Redicholas)
+- Melvin Kempe [@k3mp3](https://github.com/k3mp3)
+
+## Code
+The design for the website was taken from the design group and implemented by the code group using HTML, SASS, and TypeScript and Vite.
+Additionally, some animations have been added to enhance the user experience.
+
+## Features
+- Responsive design
+- Animated mobile menu
+- Interactive map showing the location of the pizzeria (Not really, its the location of our school...)
+- Animated elements for a more engaging experience
+
+## Technologies Used
+- HTML
+- SASS
+- TypeScript
+- Vite
+- ESLint
+- Prettier

@@ -32,8 +32,10 @@
 @keyframes rotate {
   0% {
     transform: rotate(0);
+    left: 0;
   }
   100% {
+    left: 2.5%;
     transform: rotate(6deg);
   }
 }
@@ -71,13 +73,13 @@ header {
     background-repeat: no-repeat;
     height: calc(100vh - 90px);
     position: relative;
-    
+
     // Kanske inte funkar
     animation: fadeIn ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     // Slut på kanske dålig kod
-    
+
     overflow: hidden;
     .popupPizza {
       background-image: url('/webformat/headerPizza.png');
@@ -95,7 +97,7 @@ header {
         top: -7%;
         scale: (1.1);
         animation-name: rotate;
-        animation-duration: 0.7s;
+        animation-duration: 1.7s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;

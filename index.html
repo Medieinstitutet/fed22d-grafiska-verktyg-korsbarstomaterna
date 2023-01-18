@@ -9,7 +9,7 @@
 
     <!--Google fonts-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Satisfy&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Catamaran:wght@100&family=Satisfy&display=swap"
       rel="stylesheet"
     />
     <title>Pizzaleria</title>
@@ -20,6 +20,18 @@
 
 
   <body>
+    <div class="cookies">
+      <div class="cookies-text">
+        <p>
+          You will have to accept cookies to continue on this website. Sorry to say they don’t taste good but we´ll
+          promise you our pizza does!
+        </p>
+      </div>
+      <div class="cookies-buttons">
+        <button id="cookiesAccept" class="cookies-buttons-button">Accept</button>
+        <button id="cookiesDecline" class="cookies-buttons-button">Decline</button>
+      </div>
+    </div>
     <!--Header section-->
     <header>
       <div class="nav-container">
@@ -43,7 +55,7 @@
             <div class="burger-menu-nav-header"></div>
             <div class="burger-menu-nav-content">
               <div class="burger-menu-nav-image">
-                <img src="/webformat/mainHeroPopUp.png" alt="Pizza" />
+                <img src="/webformat/mainHeroPopUp.png" alt="Pizza" height="641" width="1000" />
               </div>
               <div class="burger-menu-nav-links">
                 <a href="#">Menu</a>
@@ -73,6 +85,9 @@
         />
       </div>
       <div class="header-background-image">
+        <div class="popupPizza"></div>
+       <!--        <img class="pizzaPopup" src="/webformat/headerPizza.png" alt="Pizza" height="641" width="1000" />-->
+
         <!--Div to display the header image containing a pizza-->
         <div class="header-buttons-container">
           <button class="header-btn">BOOK A TABLE</button>
@@ -87,17 +102,6 @@
             then I eat pizza.
           </blockquote>
           <cite>- Lara Stone</cite>
-        </div>
-      </div>
-
-      <div class="cookies">
-        <p>
-          You will have to accept cookies to continue on this website. Sorry to say they don’t taste good but we´ll
-          promise you our pizza does!
-        </p>
-        <div class="cookie-btn-container">
-          <button class="cookie-btn-accept">Accept</button>
-          <button class="cookie-btn-decline">Decline</button>
         </div>
       </div>
     </header>
@@ -121,41 +125,49 @@
 
     <!--Footer section-->
     <footer>
-      <div class="footer-upper-container">
-        <div class="left-side">
-          <h4>Pizzaleria</h4>
-          <p>
-            Cheeseandtomatostreet 42 <br />
-            000 00 Pizzatown <br />
-          </p>
-          <div>
-            <i class="fa-sharp fa-solid fa-phone"></i>
-            <strong class="phone-number"> 0813-53597249 </strong>
+      <div class="footer-container">
+        <div class="footer-upper-container">
+          <div class="left-side">
+            <h4>Pizzaleria</h4>
+            <p>
+              Cheeseandtomatostreet 42 <br />
+              000 00 Pizzatown <br />
+            </p>
+            <div>
+              <i class="fa-sharp fa-solid fa-phone"></i>
+              <strong class="phone-number"> 0813-53597249 </strong>
+            </div>
+          </div>
+          <div class="right-side">
+            <i class="fa-sharp fa-solid fa-clock"></i>
+            <p class="open-hours">
+              <strong>Open hours:</strong>
+  
+              <span>monday-thursday:<time datetime="10:00">10</time>-<time datetime="01:00">01</time> </span>
+              <span>friday-sunday:<time datetime="12:00">12</time>-<time datetime="03:00">03</time> </span>
+            </p>
           </div>
         </div>
-        <div class="right-side">
-          <i class="fa-sharp fa-solid fa-clock"></i>
-          <p class="open-hours">
-            <strong>Open hours:</strong>
-
-            <span>monday-thursday:<time datetime="10:00">10</time>-<time datetime="01:00">01</time> </span>
-            <span>friday-sunday:<time datetime="12:00">12</time>-<time datetime="03:00">03</time> </span>
-          </p>
+  
+        <div class="footer-middle-container">
+          <p class="map-title">Find us here!</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.1300869759457!2d17.97921579551766!3d59.33078194545629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d6c21fb0343%3A0xe531e25988e5948e!2sMedieinstitutet!5e0!3m2!1ssv!2sse!4v1673523111546!5m2!1ssv!2sse" width="500" height="375" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </div>
 
-      <div class="footer-bottom-container">
-        <div class="sign-up">
-          <p>Sign up for latest news and happenings:</p>
-          <form>
-            <input type="mail" placeholder="enter your email" />
-            <button>Send</button>
-          </form>
-        </div>
-        <div class="social-media">
-          <i class="fa-brands fa-facebook hover-on-icon"></i>
-          <i class="fa-brands fa-instagram hover-on-icon"></i>
-          <i class="fa-sharp fa-solid fa-envelope hover-on-icon"></i>
+        <div class="footer-bottom-container">
+          <div class="sign-up">
+            <p class="sign-up-text">Sign up for latest news and happenings:</p>
+            <form>
+              <input type="email" id="emailInput" placeholder="enter your email" />
+              <input type="submit" id="emailSubmit" value="Send" disabled></input>
+            </form>
+          </div>
+           <div class="social-media">
+            <i class="fa-brands fa-facebook hover-on-icon"></i>
+            <i class="fa-brands fa-instagram hover-on-icon"></i>
+            <i class="fa-sharp fa-solid fa-envelope hover-on-icon"></i>
+          </div>
+
         </div>
       </div>
     </footer>

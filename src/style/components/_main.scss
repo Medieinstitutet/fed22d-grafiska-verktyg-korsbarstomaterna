@@ -58,6 +58,8 @@ main {
     background: $white-100;
     font-size: 1.5rem;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
 
     &:hover {
       background: $green-100;

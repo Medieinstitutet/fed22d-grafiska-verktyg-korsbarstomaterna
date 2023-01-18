@@ -152,4 +152,24 @@ footer {
       text-align: left;
     }
   }
+
+  .hover-on-icon:hover {
+    font-size: 48px;
+    cursor: pointer;
+    animation: rotation 1s linear;
+  }
+  
+  @keyframes rotation {
+      0% {
+        transform: rotation(0deg);
+      }
+  
+      50% {
+        transform: rotation(180deg);
+      }
+  
+      100% {
+        transform: rotation(360deg);
+      }
+  }
 }

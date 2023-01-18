@@ -37,3 +37,23 @@ a {
     color: c.$green-100;
   }
 }
+
+.hover-on-icon:hover {
+  font-size: 48px;
+  cursor: pointer;
+  animation: rotation 1s linear;
+}
+
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+}

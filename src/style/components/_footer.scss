@@ -186,32 +186,33 @@ footer {
       text-align: left;
     }
   }
-
-  .hover-on-icon:hover {
-    font-size: 48px;
-    cursor: pointer;
-    animation: rotation 1s linear;
-  }
-  
-  @keyframes rotation {
-      0% {
-        transform: rotation(0deg);
-      }
-  
-      50% {
-        transform: rotation(180deg);
-      }
-  
-      100% {
-        transform: rotation(360deg);
-      }
-  }
 }
 
 
 /* Desktop screen size */
 @media screen and (min-width: 1200px) {
   footer {
+
+    .hover-on-icon:hover {
+      font-size: 48px;
+      cursor: pointer;
+      animation: rotation 1s linear;
+    }
+    
+    @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+    
+        50% {
+          transform: rotate(180deg);
+        }
+    
+        100% {
+          transform: rotate(360deg);
+        }
+    }
+
     .footer-container {
       display: flex;
       gap: 45px;

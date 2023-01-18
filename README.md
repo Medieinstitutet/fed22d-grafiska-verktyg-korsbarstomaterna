@@ -28,7 +28,7 @@ Code:
 - Melvin Kempe [@k3mp3](https://github.com/k3mp3)
 
 ## Code
-The design for the website was taken from the design group and implemented by the code group using HTML, SASS, and TypeScript and Vite.
+The design for the website was taken from the design group and implemented by the code group using HTML, SASS, and TypeScript.
 Additionally, some animations have been added to enhance the user experience.
 
 ## Features

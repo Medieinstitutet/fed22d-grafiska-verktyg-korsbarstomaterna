@@ -42,5 +42,16 @@
       color: c.$yellow;
       border-radius: 10px;
     }
+
+    &-button:hover {
+      background-color: c.$yellow-100;
+      color: white;
+      cursor: pointer;
+    }
+
+    &-button:active {
+      background-color: c.$yellow;
+      color: white;
+    }
   }
 }

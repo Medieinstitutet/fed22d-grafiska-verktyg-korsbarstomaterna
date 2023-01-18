@@ -82,9 +82,13 @@ footer {
       margin-right: -61px;
       border: none;
       border-radius: 13px;
-      outline-color: $green-100;
+      outline: none;
       padding-left: 20px;
       font-family: 'Roboto Mono';
+
+      &:focus {
+        border: 2px solid $green-100;
+      }
     }
 
     input[type='submit'] {
@@ -94,6 +98,8 @@ footer {
       width: 60px;
       margin: 0;
       border-radius: 0 13px 13px 0;
+      position: relative;
+      left: 2px;
 
       font-family: 'Roboto Mono';
       font-style: normal;

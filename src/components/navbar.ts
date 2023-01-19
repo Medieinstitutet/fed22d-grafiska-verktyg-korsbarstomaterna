@@ -30,17 +30,17 @@ const toggleMenu = () => {
     const innerButtonEl = element.querySelector('.burger-menu-button-inner') as HTMLDivElement;
     const outerButtonEl = element.querySelector('.burger-menu-button-outer') as HTMLDivElement;
 
-    if (element.ariaExpanded === 'true') {
+    if (element.getAttribute('aria-expanded') === 'true') {
       // Menu is currently open
       outerButtonEl.classList.remove('display-none');
       innerButtonEl.classList.add('display-none');
-      element.ariaExpanded = 'false';
+      element.setAttribute('aria-expanded', 'false');
       toggleOverlay(false);
-    } else if (element.ariaExpanded === 'false' || element.ariaExpanded === 'undefined') {
+    } else if (element.getAttribute('aria-expanded') === 'false') {
       // Menu is currently closed
       innerButtonEl.classList.remove('display-none');
       outerButtonEl.classList.add('display-none');
-      element.ariaExpanded = 'true';
+      element.setAttribute('aria-expanded', 'true');
       toggleOverlay(true);
     }
   }

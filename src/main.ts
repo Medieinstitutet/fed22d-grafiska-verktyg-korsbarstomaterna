@@ -102,4 +102,4 @@ renderPizzas();
 
 /* GSAP animation */
 const navbar = document.querySelector('.nav-container-onload');
-gsap.to(navbar, { y: 170, delay: 1 });
+gsap.from(navbar, { y: -170, delay: 1 });

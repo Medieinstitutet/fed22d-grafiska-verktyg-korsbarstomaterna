@@ -1,3 +1,5 @@
+// eslint-disable-next-line prettier/prettier
+import { gsap } from 'gsap';
 import toggleMenu from './components/navbar';
 
 const burgerButtonEl = document.querySelector('.burger-menu-button');
@@ -97,3 +99,7 @@ cookieBtnAccept?.addEventListener('click', closeCookiePopup);
 cookieBtnDecline?.addEventListener('click', closeCookiePopup);
 emailInput?.addEventListener('keyup', validateEmail);
 renderPizzas();
+
+/* GSAP animation */
+const navbar = document.querySelector('.nav-container-onload');
+gsap.to(navbar, { y: 170, delay: 1 });

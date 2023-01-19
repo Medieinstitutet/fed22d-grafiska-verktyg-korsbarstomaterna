@@ -38,6 +38,16 @@ footer {
     font-size: 16px;
     font-weight: 400;
 
+    .left-side {
+      div {
+        .phone-number {
+          a[href^='tel'] {
+            color: black;
+          }
+        }
+      }
+    }
+
     p:nth-child(3) {
       text-align: left;
       margin-left: auto;
@@ -46,7 +56,7 @@ footer {
 
     i {
       position: absolute;
-      left: 20px;
+      left: 0;
       font-size: 43px;
     }
 
@@ -72,23 +82,39 @@ footer {
       margin-right: -61px;
       border: none;
       border-radius: 13px;
-      outline-color: $green-100;
+      outline: none;
       padding-left: 20px;
       font-family: 'Roboto Mono';
+
+      &:focus {
+        border: 2px solid $green-100;
+      }
     }
 
-    button {
+    input[type='submit'] {
       background-color: $green-100;
       border: none;
       height: 100%;
-      width: 61px;
+      width: 60px;
       margin: 0;
-      border-radius: 0 12px 12px 0;
+      border-radius: 0 13px 13px 0;
+      position: relative;
+      left: 2px;
+
       font-family: 'Roboto Mono';
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       color: #ffffff;
+
+      &:hover {
+        background-color: $green-200;
+      }
+
+      &:disabled {
+        background-color: $grey-0;
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -101,18 +127,23 @@ footer {
       position: static;
     }
   }
+
+  .footer-middle-container {
+    display: none;
+  }
 }
+
 
 /* Tablet screen size */
 @media screen and (min-width: 700px) {
   .footer-upper-container {
-    display: flex;
+    display: grid;
+    gap: 200px;
+    grid-template-columns: auto auto;
     max-width: 850px;
-    margin: auto;
-
-    .phone-number {
-      font-family: 'Roboto Mono';
-    }
+    margin-bottom: 0px;
+    margin: 0 auto;
+    padding: 15px;
 
     .open-hours {
       margin-top: 45px;
@@ -120,8 +151,12 @@ footer {
 
     .fa-clock {
       top: 50%;
-      transform: translate(10%, -50%);
+      transform: translate(-100%, -50%);
     }
+  }
+
+  .footer-middle-container {
+    display: none;
   }
 
   .footer-bottom-container {
@@ -142,14 +177,108 @@ footer {
       height: 45px;
     }
 
-    button {
+    input[type='submit'] {
+      position: relative;
+      bottom: 1px;
+      right: 10px;
       height: 45px;
+      width: 70px;
       margin-top: 2px;
+      cursor: pointer;
     }
 
     p {
       margin-left: 15px;
       text-align: left;
+    }
+  }
+}
+
+
+/* Desktop screen size */
+@media screen and (min-width: 1200px) {
+  footer {
+
+    .footer-container {
+      display: flex;
+      gap: 45px;
+      max-width: 1600px;
+      margin: auto;
+    }
+
+    .footer-upper-container {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      order: 3;
+      margin-top: 0px;
+      gap: 30px;
+
+      .right-side {
+        margin-top: -30px;
+      }
+
+      .left-side {
+        order: 1;
+      }
+
+      .fa-clock {
+        margin-left: 10px;
+        top: 80%;
+        transform: translate(10%, -80%);
+      }
+
+      .fa-phone {
+        margin-left: 10px;
+        margin-top: -8px;
+      }
+    }
+
+    .footer-middle-container {
+      padding: 20px;
+      order: 2;
+      display: block;
+      //background-color: aqua;
+      max-width: 100%;
+
+      iframe {
+        max-width: 100%;
+        max-height: auto;
+        border-radius: 13px;
+        box-shadow: 6px 6px 6px rgb(0 0 0 / 0.2);
+      }
+
+      .map-title {
+        text-align: left;
+      }
+    }
+
+    .footer-bottom-container {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      order: 1;
+      margin-top: 0px;
+
+      .sign-up-text {
+        margin-left: 5%;
+      }
+
+      p {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      input {
+        width: 90%;
+      }
+
+      .social-media {
+        padding-top: 20px;
+        justify-content: center;
+        margin: auto;
+        max-width: 90%;
+      }
     }
   }
 }

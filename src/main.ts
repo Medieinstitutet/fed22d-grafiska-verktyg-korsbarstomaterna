@@ -101,5 +101,8 @@ emailInput?.addEventListener('keyup', validateEmail);
 renderPizzas();
 
 /* GSAP animation */
-const navbar = document.querySelector('.nav-container-onload');
-gsap.from(navbar, { y: -170, delay: 1 });
+// const navbar = document.querySelector('.nav-container-onload');
+const onLoadElements = document.querySelectorAll('.nav-container-onload');
+for (const el of onLoadElements) {
+  gsap.from(el, { y: -170, delay: 1 });
+}
